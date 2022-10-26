@@ -10,7 +10,7 @@ const TopNav = () => {
     const location = useLocation()
     const navigate = useNavigate()
 
-    const [dark, setDark] = useState(false)
+    const [dark, setDark] = useState(null)
     const { user, userLogout } = useContext(authContext)
     const [navToggle, setNavToggle] = useState(false)
 
@@ -21,7 +21,7 @@ const TopNav = () => {
     const handleLogin = () => {
         navigate('/login', { state: { from: location.pathname } })
     }
-
+    
     useEffect(() => {
         dark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')
     }, [dark])

@@ -12,6 +12,7 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login'
 import Registration from './pages/registration/Registration'
 import ResetPassword from './pages/reset-password/ResetPassword';
+import Error from './pages/error/Error';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     {
       path: '/',
       element: <Main />,
+      errorElement: <Error />,
       children: [
         {
           path: '/',
