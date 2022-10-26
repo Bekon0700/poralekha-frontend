@@ -22,22 +22,30 @@ const data = [
 ]
 
 const FAQ = () => {
-  return (
-    <div className='dark:bg-gray-800 dark:text-gray-100'>
-        <div className='w-11/12 mx-auto py-12'>
-            <p className='text-3xl font-bold text-center pb-8'>Frequently Asked Questons</p>
+    return (
+        <div className='dark:bg-gray-800 dark:text-gray-100'>
+            <div className='w-11/12 mx-auto py-12'>
+                <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
+                    <h2 className="text-2xl font-semibold sm:text-4xl">Frequently Asked Questions</h2>
+                    <p className="mt-4 mb-8 dark:text-gray-400">Clear your thoughts about our course</p>
+                    <div className="space-y-4">
+                        {data.map(el => {
+                            return (
+                                <details key={el.id} className="w-full border rounded-lg">
+                                    <summary className="px-4 py-6 text-lg font-semibold focus:outline-none focus-visible:ring-violet-400">{el.q}</summary>
+                                    <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">{el.a}</p>
+                                </details>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
             <div className='flex flex-col gap-4'>
-                {
-                    data.map(el => <QuestionCard key={el.id} data={el} />)
-                }
+                <Stats />
+                <Subscribe />
             </div>
         </div>
-        <div>
-            <Stats />
-            <Subscribe />
-        </div>
-    </div>
-  )
+    )
 }
 
 export default FAQ

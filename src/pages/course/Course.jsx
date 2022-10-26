@@ -16,13 +16,13 @@ const Course = () => {
           </div>
           <div className='flex flex-col gap-3 lg:px-3 lg:py-0 col-span-12 lg:col-span-9'>
             <div className='flex justify-between items-center'>
-              <div className='flex gap-4 items-center'>
-              <p className='text-xl lg:text-3xl font-semibold text-gray-900 dark:text-gray-100'>{name}</p>
-              {
-                isPremium && <span className=" bg-green-400 dark:text-gray-800 py-1 px-2 text-base font-medium rounded-md">Premium</span>
-              }
+              <div className='flex gap-1 flex-wrap lg:gap-4 items-center'>
+                <p className='text-lg lg:text-3xl font-semibold text-gray-900 dark:text-gray-100'>{name}</p>
+                {
+                  isPremium && <span className=" bg-green-400 dark:text-gray-800 py-1 px-2 text-base font-medium rounded-md">Premium</span>
+                }
               </div>
-              <Link to={`/pdf/${id}`}>
+              <Link to={`/pdf/${id}`} target="_blank">
                 <GrDocumentDownload className='text-2xl font-semibold text-gray-900 dark:text-3xl dark:bg-gray-400 dark:p-1 dark:rounded-lg' />
               </Link>
             </div>

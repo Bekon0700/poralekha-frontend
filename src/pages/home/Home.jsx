@@ -20,17 +20,17 @@ const Home = () => {
                         Join our coureses to ensure a better career
                     </p>
                     <div className="flex flex-wrap justify-center">
-                        <Link className="px-8 py-3 m-2 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-400 dark:text-gray-900">
+                        <Link to='/courses' className="px-8 py-3 m-2 text-lg font-semibold rounded bg-violet-400 dark:bg-violet-400 dark:text-gray-900">
                             Get started
                         </Link>
-                        <Link className="px-8 py-3 m-2 text-lg font-semibold rounded bg-green-400 dark:bg-white dark:text-gray-900">
+                        <Link to='blog' className="px-8 py-3 m-2 text-lg font-semibold rounded bg-green-400 dark:bg-white dark:text-gray-900">
                             Learn more
                         </Link>
                     </div>
                 </div>
                 <div className="w-11/12 lg:w-4/5 mx-auto flex flex-col gap-8 pb-12">
                     <p className="text-xl lg:text-3xl font-semibold text-center uppercase">Our Premium courses</p>
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 lg:gap-4">
                         {
                             premiumCourses.map(el => <CourseCard key={el.id} course={el}/>)
                         }
