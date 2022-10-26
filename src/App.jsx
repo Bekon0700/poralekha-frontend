@@ -11,6 +11,7 @@ import FAQ from './pages/faq/FAQ';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login'
 import Registration from './pages/registration/Registration'
+import ResetPassword from './pages/reset-password/ResetPassword';
 
 
 function App() {
@@ -65,6 +66,10 @@ function App() {
         {
           path: 'login',
           element: <Login />
+        },
+        {
+          path: 'reset-password',
+          element: <ResetPassword />
         },
         {
           path: 'register',

@@ -22,8 +22,11 @@ const Login = () => {
     const location = useLocation()
     const navigate = useNavigate()
 
-    const { userLogin, googleLogin, gitHubLogin } = useContext(authContext)
-    const path = location?.state?.from || '/'
+    const { userLogin, googleLogin, gitHubLogin, errorHandler, error } = useContext(authContext)
+    let path = location?.state?.from || '/'
+    if(path == '/register' || path == '/reset-password'){
+        path = '/'
+    }
     const handleSubmit = async (e) => {
         e.preventDefault()
         const form = e.target
@@ -34,7 +37,7 @@ const Login = () => {
             form.reset()
             navigate(path, { replace: true })
         } catch (err) {
-            console.log(err.message)
+            errorHandler(err.message)
         }
     }
 
@@ -56,6 +59,12 @@ const Login = () => {
         }
     }
 
+    useEffect(() => {
+        setTimeout(() => {
+            errorHandler('')
+        }, 2000);
+    }, [error])
+
     return (
         <div className='dark:bg-gray-800  dark:text-gray-100'>
             <div className='w-11/12 mx-auto flex justify-center py-12 lg:py-24'>
@@ -65,8 +74,14 @@ const Login = () => {
                         {
                             formData.map(el => <FormInput key={el.id} data={el} />)
                         }
+                        {
+                            error && <p className='text-red-900 dark:text-red-300 text-sm text-center'>{error}</p>
+                        }
                         <button className="block w-full p-3 text-center font-semibold text-lg rounded-sm text-gray-900 bg-violet-400">Sign in</button>
                     </form>
+                    <div className='py-2'>
+                        <Link to='/reset-password' className='text-sm underline text-end text-blue-400'>forget password</Link>
+                    </div>
                     <div className="flex items-center pt-4 space-x-1">
                         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
                         <p className="px-3 text-base text-gray-800 dark:text-gray-100 font-semibold">Login with social accounts</p>
