@@ -27,7 +27,7 @@ const data = [
 
 const Blog = () => {
   return (
-    <div className='dark:bg-gray-800 dark:text-gray-100'>
+    <div className='bg-white text-black dark:bg-gray-800 dark:text-gray-100'>
         <div className='w-11/12 mx-auto py-8'>
             <p className='text-3xl font-bold text-center pb-8'>Blog Post</p>
             <div className='flex flex-col gap-4'>

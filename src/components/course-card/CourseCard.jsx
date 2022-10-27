@@ -5,13 +5,13 @@ const CourseCard = ({ course }) => {
   const discount = (fee * 1) * ((discountPercentage * 1) / 100)
   const discountPrice = (fee * 1) - discount
   return (
-    <div className=' dark:bg-gray-800 dark:text-gray-100'>
+    <div className=' bg-white text-black dark:bg-gray-800 dark:text-gray-100'>
       <Link to={`/courses/${id}`} className="card w-full bg-base-100 rounded-md border dark:border-gray-600 shadow-xl">
         {
           isPremium && <span className="absolute top-4 -left-9 -rotate-45 bg-green-400 dark:text-gray-800 py-2 px-7 text-2xl font-medium rounded-md">Premium</span>
         }
         <figure><img src={thumbnail} alt={name} className='h-64 w-full' /></figure>
-        <div className="card-body p-4 flex flex-col justify-between h-80 dark:bg-gray-800 dark:text-gray-100">
+        <div className="card-body p-4 flex flex-col justify-between h-80 bg-white text-black dark:bg-gray-800 dark:text-gray-100">
           <h2 className="pb-3">
             <p className='text-2xl font-normal'>{name}</p>
           </h2>

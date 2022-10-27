@@ -11,7 +11,7 @@ const Home = () => {
     
     return (
         <div>
-            <section className="dark:bg-gray-800 dark:text-gray-100">
+            <section className="bg-white text-black dark:bg-gray-800 dark:text-gray-100">
                 <div className="container mx-auto flex flex-col items-center px-4 py-12 text-center md:py-32 md:px-10 lg:px-32 lg:w-1/2">
                     <h1 className="text-4xl font-bold leading-none sm:text-5xl">
                         Welcome to largest online leaning platform

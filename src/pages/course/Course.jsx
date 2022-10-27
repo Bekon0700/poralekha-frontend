@@ -8,7 +8,7 @@ const Course = () => {
   const discount = (fee * 1) * ((discountPercentage * 1) / 100)
   const discountPrice = (fee * 1) - discount
   return (
-    <div className='dark:bg-gray-800 dark:text-gray-100'>
+    <div className='bg-white text-black dark:bg-gray-800 dark:text-gray-100'>
       <div className='w-11/12 lg:w-3/4 mx-auto py-4 lg:py-24'>
         <div className='grid grid-cols-12 gap-4 lg:gap-2'>
           <div className='col-span-12 lg:col-span-3 justify-center'>

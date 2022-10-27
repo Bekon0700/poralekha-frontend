@@ -23,7 +23,7 @@ const data = [
 
 const FAQ = () => {
     return (
-        <div className='dark:bg-gray-800 dark:text-gray-100'>
+        <div className='bg-white text-black dark:bg-gray-800 dark:text-gray-100'>
             <div className='w-11/12 mx-auto py-12'>
                 <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
                     <h2 className="text-2xl font-semibold sm:text-4xl">Frequently Asked Questions</h2>

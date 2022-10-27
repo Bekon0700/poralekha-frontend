@@ -5,7 +5,7 @@ import CourseCard from '../../components/course-card/CourseCard'
 const Courses = () => {
     const { courses } = useLoaderData()
     return (
-        <div className='dark:bg-gray-800 dark:text-gray-100'>
+        <div className='bg-white text-black dark:bg-gray-800 dark:text-gray-100'>
             <div className='w-11/12 mx-auto py-12'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 lg:col-span-3 2xl:col-span-2'>

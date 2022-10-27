@@ -68,7 +68,7 @@ const Registration = () => {
         }, 2000);
     }, [err])
     return (
-        <div className='dark:bg-gray-800  dark:text-gray-100'>
+        <div className='bg-white text-black dark:bg-gray-800  dark:text-gray-100'>
             <div className='w-11/12 mx-auto flex justify-center py-12 lg:py-16'>
                 <div className="w-full max-w-md p-6 lg:p-8 space-y-3 rounded-xl text-gray-900 dark:text-gray-100 border border-gray-700">
                     <h1 className="text-2xl font-bold text-center">Register</h1>
